@@ -149,3 +149,7 @@ covering CRUD operations and missing expense handling.
 ## Author
 
 Computer Science Portfolio Project
+
+## Application Screenshot
+
+![Expense Tracker Dashboard](images/dashboard.png)
