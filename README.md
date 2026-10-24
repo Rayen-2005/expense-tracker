@@ -4,6 +4,17 @@
 A full-stack expense tracking application built with Java,
 Spring Boot, MySQL, HTML, CSS, and JavaScript.
 
+## Live Demo
+
+Try the fully functional Expense Tracker application online!
+
+**Live Website:** https://expense-tracker-hq1v.onrender.com/
+**Source Code:** https://github.com/Rayen-2005/expense-tracker
+
+> Note: The free hosting service may take a minute to
+> start after a period of inactivity.
+
+
 ## Overview
 
 Expense Tracker allows users to manage personal expenses,
