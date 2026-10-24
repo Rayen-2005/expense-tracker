@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker</title>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<main class="container">
+
+    <!-- PAGE HEADER -->
+    <h1>Expense Tracker</h1>
+
+    <p class="subtitle">
+        Manage and organize your personal expenses.
+    </p>
+
+
+    <!-- DASHBOARD SUMMARY -->
+    <section class="dashboard">
+
+        <div class="stat-card">
+            <h3>Total Expenses</h3>
+            <p id="totalExpenses">$0.00</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>This Month</h3>
+            <p id="monthlyExpenses">$0.00</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Transactions</h3>
+            <p id="transactionCount">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Top Category</h3>
+            <p id="topCategory">None</p>
+        </div>
+
+    </section>
+
+
+    <!-- SPENDING ANALYTICS -->
+    <section class="card">
+
+        <h2>Spending by Category</h2>
+
+        <div class="chart-container">
+            <canvas id="categoryChart"></canvas>
+        </div>
+
+        <p id="chartEmptyMessage"
+           style="display: none;">
+            Add some expenses to see your spending breakdown.
+        </p>
+
+    </section>
+
+
+    <!-- ADD AND EDIT EXPENSE FORM -->
+    <section class="card">
+
+        <h2>Add New Expense</h2>
+
+        <form id="expenseForm">
+
+            <div class="form-grid">
+
+                <!-- Description -->
+                <div class="form-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <input
+                        type="text"
+                        id="description"
+                        placeholder="e.g. Groceries"
+                        maxlength="255"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Amount -->
+                <div class="form-group">
+
+                    <label for="amount">
+                        Amount ($)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="amount"
+                        min="0.01"
+                        step="0.01"
+                        placeholder="0.00"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Category -->
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <select id="category" required>
+                        <option value="Food">Food</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Bills">Bills</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                </div>
+
+
+                <!-- Date -->
+                <div class="form-group">
+
+                    <label for="date">
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Submit Button -->
+            <button
+                type="submit"
+                class="submit-button">
+                Add Expense
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- EXPENSE HISTORY -->
+    <section class="card">
+
+        <h2>Expense History</h2>
+
+
+        <!-- SEARCH AND FILTER -->
+        <div class="filter-bar">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search expenses..."
+                aria-label="Search expenses"
+            >
+
+            <select
+                id="categoryFilter"
+                aria-label="Filter by category">
+
+                <option value="All">
+                    All Categories
+                </option>
+
+                <option value="Food">
+                    Food
+                </option>
+
+                <option value="Transportation">
+                    Transportation
+                </option>
+
+                <option value="Shopping">
+                    Shopping
+                </option>
+
+                <option value="Entertainment">
+                    Entertainment
+                </option>
+
+                <option value="Bills">
+                    Bills
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- EXPENSE TABLE -->
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="expenseTableBody">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- CHART.JS LIBRARY -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+
+<!-- OUR JAVASCRIPT -->
+<script src="/script.js"></script>
+
+</body>
+</html>

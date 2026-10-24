@@ -1,0 +1,44 @@
+
+# Maven build output
+target/
+
+# Eclipse
+.metadata/
+.settings/
+.classpath
+.project
+.factorypath
+.springBeans
+.sts4-cache/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local configuration
+application-local.properties
+application-secret.properties
+
+# Temporary files
+*.tmp
+*.bak
