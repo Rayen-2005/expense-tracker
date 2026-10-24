@@ -12,8 +12,6 @@ Try the fully functional Expense Tracker application online!
 
 **Source Code:** https://github.com/Rayen-2005/expense-tracker
 
-> Note: The free hosting service may take a minute to
-> start after a period of inactivity.
 
 
 ## Overview
